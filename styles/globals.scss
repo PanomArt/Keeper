@@ -1,0 +1,38 @@
+@import './variables.scss';
+@import '../webpage-UI/footer/Footer.scss';
+@import '../webpage-UI/header/Header.scss';
+@import '../webpage-UI/hero/Hero.scss';
+@import '../webpage-UI/features/Features.scss';
+@import '../webpage-UI/Client/Client.scss';
+@import "../webpage-UI/Service/Service.scss";
+@import '../webpage-UI/footer/Footer.scss';
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth !important;
+}
+@font-face {
+    font-family: 'Spinnaker';
+    src: url('../public/font/Spinnaker-Regular.ttf');
+}
+h3{
+    font-size: 18px;
+    font-weight: 800;
+    font-family: 'Spinnaker',sans-serif;
+}
+h2{
+    font-family: 'Spinnaker';
+}
+p{
+    font-family: 'Spinnaker';
+}
+a{
+    font-family: 'Spinnaker',sans-serif;
+    text-decoration: none;
+}
+li{
+    font-family: 'Spinnaker',sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+}

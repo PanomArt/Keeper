@@ -1,0 +1,112 @@
+.header-maindiv{
+    position: absolute;
+    z-index: 10;
+    @include flex(center,space-between,none);
+    width: 100%;
+    padding: 1.5% 20%;
+       .leftside{
+            .header-title{
+                 padding: 0.2em 0;
+                 font-size: 18px;
+                 border-bottom : 4px solid $maincolor;
+                 color: $maincolor;
+                 width: 100%;
+            }
+       }
+       .rightside{
+            .navigator{
+                 a{
+                    color: rgba(white,0.5);
+                    font-weight: 800;
+                    font-size: 15px;
+                    margin: 0 1em;
+                    transition: 0.3s ease-in-out;
+                        &:first-child{
+                          color: $maincolor;
+                        }
+                        &:hover{
+                          color: $maincolor;
+                        }
+                 }
+            }
+       }
+       .mobile-menus{
+          font-size: 27px;
+          display: none;
+          z-index: 1;
+       }
+}
+@media screen and (max-width:992px) {
+     .header-maindiv{
+          background: rgba(white,0.95);
+          position: relative;
+          .rightside{
+               display: none;
+               background: rgb(214, 214, 214);
+               position: absolute;
+               right: 11em;
+               top: 0;
+               .navigator{
+                    @include flex(center,none,column);
+                    margin: 2em 0;
+                    width: 15em;
+                    a{
+                         padding: 1.2em 0;
+                         color: black;
+                         text-align: center;
+                         border-bottom: 1px solid rgba(white,0.5);
+                         width: 80%;
+                         &:first-child{
+                              color: rgb(0, 0, 128);
+                            }
+                            &:hover{
+                              color: $maincolor;
+                            }
+                    }
+               }
+               &.active{
+                    display: block;
+               }
+          }
+          .mobile-menus{
+               font-size: 27px;
+               display: block;
+          }
+     } 
+}
+@media screen and (max-width:640px) {
+     .header-maindiv{
+          padding: 5% 2%;
+          .leftside{
+               .header-title{
+                    padding: 0.1em 0;
+                    font-size: 25px;
+                    border-bottom : 4px solid $maincolor;
+                    color: $maincolor;
+                    width: 100%;
+               }
+          }
+          .rightside{
+               display: none;
+               background: rgb(214, 214, 214);
+               position: absolute;
+               right: 0;
+               top: 0;
+               width: 100vw;
+               height: 100vh;
+               .navigator{
+                    margin-top: 5rem;
+                    a{
+                         font-size: 25px;
+                    }
+               }
+               &.active{
+                    @include flex(none,center,none);
+               }
+          }
+          .mobile-menus{
+               font-size: 30px;
+               display: block;
+          }
+     }
+}

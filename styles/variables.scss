@@ -1,0 +1,19 @@
+$maincolor: #d4d200;
+$svggreencolor: #40C7C0;
+@mixin flex($align, $justify, $direction) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-direction: $direction !important;
+}
+@mixin title(){
+    width: fit-content;
+    font-size: 28px;
+    padding: 0.1em 0;
+    border-bottom: 5px solid $maincolor;
+}
+@mixin grid($columns, $gap) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-gap: $gap;
+}

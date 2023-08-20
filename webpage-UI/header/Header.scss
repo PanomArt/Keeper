@@ -40,18 +40,24 @@
      .header-maindiv{
           background: rgba(white,0.95);
           position: relative;
+          padding : 2% 3.5%;
+          .leftside{
+               .header-title{
+                    font-size: 30px;
+               }
+          }
           .rightside{
                display: none;
                background: rgb(214, 214, 214);
                position: absolute;
-               right: 11em;
+               right: 0;
                top: 0;
                .navigator{
                     @include flex(center,none,column);
                     margin: 2em 0;
-                    width: 15em;
+                    width: 20em;
                     a{
-                         padding: 1.2em 0;
+                         padding: 2em 0;
                          color: black;
                          text-align: center;
                          border-bottom: 1px solid rgba(white,0.5);
@@ -69,18 +75,17 @@
                }
           }
           .mobile-menus{
-               font-size: 27px;
+               font-size: 30px;
                display: block;
           }
      } 
 }
 @media screen and (max-width:640px) {
      .header-maindiv{
-          padding: 5% 2%;
+          padding: 5% 3.5%;
           .leftside{
                .header-title{
                     padding: 0.1em 0;
-                    font-size: 25px;
                     border-bottom : 4px solid $maincolor;
                     color: $maincolor;
                     width: 100%;
@@ -105,7 +110,6 @@
                }
           }
           .mobile-menus{
-               font-size: 30px;
                display: block;
           }
      }
